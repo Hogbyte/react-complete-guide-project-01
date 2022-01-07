@@ -25,7 +25,7 @@ const UserInput = (props) => {
         }
 
         const ageText = age.trim();
-        if (ageText.length === 0 || Number.isNaN(ageText)) {
+        if (ageText.length === 0 || Number.isNaN(+ageText)) {
             setErrorMessage('Please enter a number for an age value.');
             return;
         }
