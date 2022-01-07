@@ -15,6 +15,7 @@ const App = () => {
   return (
     <div className={css.app}>
       <UserInput onAddUser={addUserHandler} />
+      <br />
       <UserList users={users} />      
     </div>
   );

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import Card from './Card';
 import ErrorModal from './ErrorModal';
 
 import css from './UserInput.module.css';
@@ -50,13 +51,13 @@ const UserInput = (props) => {
     return (
         <>
             <ErrorModal message={errorMessage} onClose={modalCloseHandler} />
-            <div className={css.userInput}>
+            <Card className={css.userInput}>
                 Username:<br />
                 <input type="text" value={name} onChange={nameChangeHandler} /><br />
                 Age (Years):<br />
                 <input type="text" value={age} onChange={ageChangeHandler} /><br />
                 <button type="button" onClick={clickHandler}>Add User</button>
-            </div>
+            </Card>
         </>
     );
 }
