@@ -52,10 +52,10 @@ const UserInput = (props) => {
         <>
             <ErrorModal message={errorMessage} onClose={modalCloseHandler} />
             <Card className={css.userInput}>
-                Username:<br />
-                <input type="text" value={name} onChange={nameChangeHandler} /><br />
-                Age (Years):<br />
-                <input type="text" value={age} onChange={ageChangeHandler} /><br />
+                <label htmlFor="nameInput">Username:</label><br />
+                <input id="nameInput" type="text" value={name} onChange={nameChangeHandler} /><br />
+                <label htmlFor="ageInput">Age (Years):</label><br />
+                <input id="ageInput" type="text" value={age} onChange={ageChangeHandler} /><br />
                 <button type="button" onClick={clickHandler}>Add User</button>
             </Card>
         </>

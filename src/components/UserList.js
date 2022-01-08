@@ -7,7 +7,7 @@ const UserList = (props) => {
         <Card>
             {props.users.length === 0 && <div className={css.empty}>No users.</div>}
             {props.users.map(user => 
-                <div className={css.user}>{user.name} ({user.age} years old)</div>
+                <div key={user.id} className={css.user}>{user.name} ({user.age} years old)</div>
             )}
         </Card>
     );

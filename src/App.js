@@ -9,7 +9,8 @@ const App = () => {
   const [ users, setUsers ] = useState([]);
 
   const addUserHandler = (newUser) => {
-      setUsers([...users, newUser]);
+      const nextUserId = users.length + 1;
+      setUsers([...users, { ...newUser, id: nextUserId }]);
   }
 
   return (
